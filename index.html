@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Серпуховитин Евгений - Руководитель направления логистики</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1a365d; /* Темно-синий - профессионализм */
+            --secondary: #2d3748; /* Темно-серый */
+            --accent: #3182ce; /* Акцентный синий */
+            --light: #f7fafc; /* Светлый фон */
+            --border: #e2e8f0; /* Цвет границ */
+            --text: #2d3748; /* Основной текст */
+            --text-light: #718096; /* Вторичный текст */
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #2c5282;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 50px 0 40px;
+            margin-bottom: 40px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        
+        .header-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+        
+        .competencies-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .competencies-box h3 {
+            color: #90cdf4;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .competencies-box h3 i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .competencies-box p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 280px;
+        }
+        
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            border-radius: 8px; /* Квадратное с закругленными углами */
+        }
+        
+        .profile-photo-placeholder {
+            color: #cbd5e0;
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .contacts {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .contact-item i {
+            width: 24px;
+            margin-right: 12px;
+            color: #90cdf4;
+        }
+        
+        /* Основной контент */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        h3 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .job-period {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .company {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .competencies {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        
+        .achievements-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .achievements-title i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+        
+        .achievements {
+            background: #f0f9ff;
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            margin-top: 5px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .achievement {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .achievement:before {
+            content: "✓";
+            color: #38a169;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        /* Боковая панель */
+        .sidebar .card {
+            margin-bottom: 25px;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: #ebf8ff;
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #bee3f8;
+        }
+        
+        .personal-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .personal-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .personal-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .personal-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .personal-value {
+            font-weight: 500;
+            text-align: right;
+            max-width: 180px;
+        }
+        
+        .about {
+            font-style: normal;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+        }
+        
+        .about p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Кнопки */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #2c5282;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        /* PDF секция */
+        .pdf-section {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+        }
+        
+        .pdf-frame {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+        
+        /* Футер */
+        footer {
+            background: var(--primary);
+            color: #cbd5e0;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .header-content {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .profile-section {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            
+            .contacts {
+                flex: 1;
+                min-width: 200px;
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .pdf-frame {
+                height: 500px;
+            }
+            
+            .header-buttons {
+                flex-direction: column;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .contacts {
+                width: 100%;
+            }
+        }
+        
+        /* Утилиты */
+        .mb-15 {
+            margin-bottom: 15px;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 25px 0;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="header-content">
+                    <h1>Серпуховитин Евгений Геннадиевич</h1>
+                    
+                    <div class="competencies-box">
+                        <h3><i class="fas fa-chart-line"></i> КОМПЕТЕНЦИИ</h3>
+                        <p>
+                            Опыт в международной логистике и аналитике. Работаю с клиентскими портретами, коммерческими решениями и данными. Помогаю структурировать сложные процессы и находить точки роста на уровне продукта и сервиса.
+                        </p>
+                    </div>
+                    
+                    <div class="header-buttons">
+                        <a href="resume.pdf" download class="btn">
+                            <i class="fas fa-download"></i> Скачать резюме в PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <div class="profile-photo">
+                        <div class="profile-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (953) 171-73-12</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>serpukhovitinn@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Санкт-Петербург</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Основной контент -->
+        <main>
+            <!-- Левая колонка - опыт работы -->
+            <div class="main-content">
+                <!-- Опыт работы -->
+                <div class="card">
+                    <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
+                    
+                    <div class="job mb-30">
+                        <h3>Руководитель направления логистики</h3>
+                        <span class="company">ООО «Транс Маркет»</span>
+                        <span class="job-period">Май 2025 – Декабрь 2025</span>
+                        
+                        <ul>
+                            <li>Анализ клиентов и формирование коммерческих предложений на основе их бизнес-портрета и задач</li>
+                            <li>Создание конкурентных логистических решений в рамках экспортных проектов</li>
+                            <li>Привлечение новых клиентов (холодные контакты и обработка лидов)</li>
+                            <li>Ведение ключевых клиентов импортного направления</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job mb-30">
+                        <h3>Руководитель отдела логистики</h3>
+                        <span class="company">ООО «Транс Маркет»</span>
+                        <span class="job-period">Май 2024 – Август 2025</span>
+                        
+                        <ul>
+                            <li>Управление отделом из трёх сотрудников</li>
+                            <li>Увеличение конверсии реализованных запросов от отдела продаж</li>
+                            <li>Анализ причин потери лидов и разработка мер по их возврату</li>
+                            <li>Курирование проектных поставок с высокой финансовой ответственностью</li>
+                            <li>Развитие новых регионов и направлений</li>
+                        </ul>
+                        
+                        <div class="achievements-title">
+                            <i class="fas fa-trophy"></i> Достижения:
+                        </div>
+                        <div class="achievements">
+                            <div class="achievement">Оказал прямое влияние на показатели самого прибыльного логистического сезона за всю историю компании (грамотно выстроил работу команды, управлял финансовыми рисками компании, принимал ключевые решения)</div>
+                            <div class="achievement">С нуля создал полноценную платформу для работы с котировками (экспорт, импорт, реестр договоров)</div>
+                            <div class="achievement">Инициировал и реализовал крупнейшую по объёмам сделку компании</div>
+                        </div>
+                    </div>
+                    
+                    <div class="job">
+                        <h3>Менеджер по логистике</h3>
+                        <span class="company">ООО «Транс Маркет»</span>
+                        <span class="job-period">Апрель 2023 – Август 2025</span>
+                        
+                        <ul>
+                            <li>Расчёт экономики импортных поставок из Китая, ЮВА, Индии</li>
+                            <li>Оптимизация логистических цепочек исходя из потребностей клиентов</li>
+                            <li>Поиск и привлечение новых контрагентов</li>
+                        </ul>
+                        
+                        <div class="achievements-title">
+                            <i class="fas fa-trophy"></i> Достижения:
+                        </div>
+                        <div class="achievements">
+                            <div class="achievement">Разработал и внедрил направление FTL-перевозок (сформировал пул перевозчиков, настроил котировки через их сервис и обеспечил приток новых клиентов)</div>
+                            <div class="achievement">Запустил направление прямых железнодорожных перевозок (заключил договора с новыми контрагентами, организовал работу через их сервисы и привлёк новых клиентов благодаря расширенному функционалу)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Образование -->
+                <div class="card">
+                    <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
+                    
+                    <div class="job mb-20">
+                        <h3>Санкт-Петербургский государственный университет аэрокосмического приборостроения</h3>
+                        <span class="job-period">2014 – 2018</span>
+                        <p>Факультет инноватики и базовой магистерской подготовки</p>
+                        <p><strong>Специальность:</strong> Менеджер-технолог</p>
+                    </div>
+                    
+                    <div class="job">
+                        <h3>Европейский университет</h3>
+                        <span class="job-period">2019 – 2021</span>
+                        <p>Центр практической философии «СТАСИС»</p>
+                        <p><strong>Специальность:</strong> Преподаватель философии</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Правая колонка - информация -->
+            <div class="sidebar">
+                <!-- Личные данные -->
+                <div class="card">
+                    <h2><i class="fas fa-user-circle"></i> Личные данные</h2>
+                    <div class="personal-info">
+                        <div class="personal-item">
+                            <span class="personal-label">Гражданство:</span>
+                            <span class="personal-value">Российская Федерация</span>
+                        </div>
+                        <div class="personal-item">
+                            <span class="personal-label">Город:</span>
+                            <span class="personal-value">Санкт-Петербург</span>
+                        </div>
+                        <div class="personal-item">
+                            <span class="personal-label">Дата рождения:</span>
+                            <span class="personal-value">10.11.1995</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Навыки -->
+                <div class="card">
+                    <h2><i class="fas fa-cogs"></i> Навыки</h2>
+                    <div class="skills">
+                        <span class="skill-tag">Транспортная логистика</span>
+                        <span class="skill-tag">Оптимизация процессов</span>
+                        <span class="skill-tag">Аналитика данных</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Управление командой</span>
+                        <span class="skill-tag">Клиентский сервис</span>
+                        <span class="skill-tag">Бизнес-анализ</span>
+                        <span class="skill-tag">Международная логистика</span>
+                    </div>
+                </div>
+                
+                <!-- Языки -->
+                <div class="card">
+                    <h2><i class="fas fa-language"></i> Знание языков</h2>
+                    <div class="personal-info">
+                        <div class="personal-item">
+                            <span class="personal-label">Английский</span>
+                            <span class="personal-value">Уровень B2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- О себе -->
+                <div class="card">
+                    <h2><i class="fas fa-info-circle"></i> О себе</h2>
+                    <div class="about">
+                        <p>Люблю систематизировать процессы.</p>
+                        <p>Умею находить баланс между стратегией и операционной работой — вижу и «карту», и каждый шаг по маршруту.</p>
+                        <p>Ценю прозрачность и личную ответственность в работе.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- PDF просмотр -->
+        <div class="pdf-section">
+            <iframe class="pdf-frame" src="resume.pdf"></iframe>
+        </div>
+    </div>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Серпуховитин Евгений. Резюме-визитка</p>
+            <p>Обновлено: Январь 2024</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Замена фото-заглушки на реальное фото
+        document.addEventListener('DOMContentLoaded', function() {
+            function loadRealPhoto() {
+                const photoExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
+                const photoContainer = document.querySelector('.profile-photo-placeholder');
+                
+                // Проверяем наличие фото
+                photoExtensions.forEach(ext => {
+                    const img = new Image();
+                    img.src = 'photo' + ext;
+                    
+                    img.onload = function() {
+                        // Если фото найдено и загружено
+                        const photoDiv = document.querySelector('.profile-photo');
+                        photoDiv.innerHTML = `<img src="photo${ext}" alt="Серпуховитин Евгений" style="width: 100%; height: 100%; object-fit: cover;">`;
+                    };
+                });
+            }
+            
+            // Пытаемся загрузить фото
+            loadRealPhoto();
+        });
+    </script>
+</body>
+</html>

@@ -497,6 +497,24 @@
         .justify-between {
             justify-content: space-between;
         }
+        
+        .degree {
+            color: var(--text);
+            font-weight: 500;
+            margin: 5px 0 5px;
+            font-size: 0.95rem;
+        }
+        
+        .faculty {
+            margin-top: 6px;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+        
+        .specialty {
+            margin-top: 4px;
+            color: var(--text);
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -584,8 +602,16 @@
                             <li>Анализ клиентов и формирование коммерческих предложений на основе их бизнес-портрета и задач</li>
                             <li>Создание конкурентных логистических решений в рамках экспортных проектов</li>
                             <li>Привлечение новых клиентов (холодные контакты и обработка лидов)</li>
-                            <li>Ведение ключевых клиентов импортного направления</li>
                         </ul>
+                        
+                        <div class="achievements-title">
+                            <i class="fas fa-trophy"></i> Достижения:
+                        </div>
+                        <div class="achievements">
+                            <div class="achievement">Создал систему метрик для оценки логистической цепочки (очереди, риски, простои) — клиенты оптимизировали время поставки на 20%.</div>
+                            <div class="achievement">На основе аналитики и выборки из 20+ перевозчиков сформировал пул ключевых контрагентов.</div>
+                            <div class="achievement">Провёл сегментацию клиентской базы по 4 параметрам (объём, частота, направление, чувствительность к цене) — персонализировал КП, что привело к увеличению конверсии заключённых договоров.</div>
+                        </div>
                     </div>
                     
                     <div class="job mb-30">
@@ -618,8 +644,9 @@
                         
                         <ul>
                             <li>Расчёт экономики импортных поставок из Китая, ЮВА, Индии</li>
-                            <li>Оптимизация логистических цепочек исходя из потребностей клиентов</li>
-                            <li>Поиск и привлечение новых контрагентов</li>
+                            <li>Организация перевозок водным, железнодорожным, автомобильным и авиационным видами транспорта</li>
+                            <li>Оптимизация логистики с учетом потребностей импортеров</li>
+                            <li>Договорная работа</li>
                         </ul>
                         
                         <div class="achievements-title">
@@ -632,22 +659,24 @@
                     </div>
                 </div>
                 
-                <!-- Образование -->
+                <!-- Образование (сначала магистратура, потом бакалавриат, цвет степени как у основного текста) -->
                 <div class="card">
                     <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
                     
                     <div class="job mb-20">
-                        <h3>Санкт-Петербургский государственный университет аэрокосмического приборостроения</h3>
-                        <span class="job-period">2014 – 2018</span>
-                        <p>Факультет инноватики и базовой магистерской подготовки</p>
-                        <p><strong>Специальность:</strong> Менеджер-технолог</p>
+                        <h3>Европейский университет</h3>
+                        <span class="job-period">Сентябрь 2019 г. – Сентябрь 2021 г.</span>
+                        <div class="degree">Степень: магистр</div>
+                        <div class="faculty">Факультет: Центр практической философии «СТАСИС»</div>
+                        <div class="specialty">Специальность: Преподаватель философии</div>
                     </div>
                     
                     <div class="job">
-                        <h3>Европейский университет</h3>
-                        <span class="job-period">2019 – 2021</span>
-                        <p>Центр практической философии «СТАСИС»</p>
-                        <p><strong>Специальность:</strong> Преподаватель философии</p>
+                        <h3>Санкт-Петербургский государственный университет аэрокосмического приборостроения</h3>
+                        <span class="job-period">Сентябрь 2014 г. – Сентябрь 2018 г.</span>
+                        <div class="degree">Степень: бакалавр</div>
+                        <div class="faculty">Факультет: Инноватики и базовой магистерской подготовки</div>
+                        <div class="specialty">Специальность: Менеджер-технолог</div>
                     </div>
                 </div>
             </div>
@@ -678,16 +707,12 @@
                     <h2><i class="fas fa-cogs"></i> Навыки</h2>
                     <div class="skills">
                         <span class="skill-tag">Транспортная логистика</span>
-                        <span class="skill-tag">Оптимизация процессов</span>
-                        <span class="skill-tag">Аналитика данных</span>
+                        <span class="skill-tag">Оптимизация логистических процессов</span>
+                        <span class="skill-tag">Оптимизация бизнес-процессов</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">R</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Управление командой</span>
-                        <span class="skill-tag">Клиентский сервис</span>
-                        <span class="skill-tag">Бизнес-анализ</span>
-                        <span class="skill-tag">Международная логистика</span>
                     </div>
                 </div>
                 
@@ -733,7 +758,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             function loadRealPhoto() {
                 const photoExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
-                const photoContainer = document.querySelector('.profile-photo-placeholder');
                 
                 // Проверяем наличие фото
                 photoExtensions.forEach(ext => {
